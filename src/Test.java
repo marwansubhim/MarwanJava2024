@@ -16,7 +16,6 @@ public class Test {
         double dls = calc.dogLegSeverity(dogLeg, courseLength);
         DecimalFormat decimalFormat = new DecimalFormat("#.##");
         decimalFormat.format(dls);
-        // Thank you
         // Good job
 
 

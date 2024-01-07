@@ -57,7 +57,7 @@ public class Test3 {
         System.out.println("***********************************************************************");
 
         DecimalFormat df = new DecimalFormat("#.##");
-        System.out.println("Depth,  Inc,  Az,  TVD,  Vsec,  N/S,  E/W,  DLS,  CD,  CA");
+        System.out.println("Depth,   Inc,   Az,    TVD,    Vsec,   N/S,   E/W,    DLS,  CD,     CA");
 
         System.out.println(currentDepth+"  "+currentInc+"  "+currentAz+"  "+df.format(tvd2)+"  "+df.format(vs)
         +"  "+df.format(totalNS)+"  "+df.format(totalEW)+"  "+df.format(dls)+"  "+df.format(closureDistance)+

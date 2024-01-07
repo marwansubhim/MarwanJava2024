@@ -1,6 +1,8 @@
+import java.text.DecimalFormat;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
+import java.util.Scanner;
 import java.util.function.Function;
 
 /**
@@ -89,40 +91,113 @@ int[] intArr = {1, 2, 3, 4, 5, 6};
 
          */
 
-        /*
+
         SurveyCalculation surveyCalculation = new SurveyCalculation();
-        System.out.println("Measured Depth is: "+surveyCalculation.courseLength(3522,3425));
+        System.out.println("Measured Depth is: "+surveyCalculation.courseLength(7836,7740));
         System.out.println("********************Good Job***************Continue");
-        System.out.println("Dog leg is: "+surveyCalculation.dogLeg(10.75, 8, 282, 285));
+        System.out.println("Dog leg is: "+surveyCalculation.dogLeg(60.46,52.23,326.92,327.12));
         System.out.println("********************Good Job***************Continue");
-        System.out.println("Ratio Factor is: "+surveyCalculation.smoothFactor(2.792));
+        System.out.println("Ratio Factor is: "+surveyCalculation.smoothFactor(surveyCalculation.dogLeg(60.46,52.23,326.92,327.12)));
         System.out.println("********************Good Job***************Continue");
-        System.out.println("North/South is: "+surveyCalculation.changeNorthSouth(8, 10.75, 285, 282, 1.0002, 97));
+        System.out.println("North/South is: "+surveyCalculation.changeNorthSouth(52.23, 60.46, 327.12, 326.92, surveyCalculation.smoothFactor(surveyCalculation.dogLeg(60.46,52.23,326.92,327.12)), 96));
         System.out.println("********************Good Job***************Continue");
-        System.out.println("East/West is: "+surveyCalculation.changeEastWest(8,10.75,285,282,1.0002,97));
+        System.out.println("East/West is: "+surveyCalculation.changeEastWest(52.23,60.46,327.12,326.92,surveyCalculation.smoothFactor(surveyCalculation.dogLeg(60.46,52.23,326.92,327.12)),96));
         System.out.println("********************Good Job***************Continue");
-        System.out.println("Change in TVD is: "+surveyCalculation.changeInTVD(8,10.75,1.0002,97));
+        System.out.println("Change in TVD is: "+surveyCalculation.changeInTVD(52.23,60.46,surveyCalculation.smoothFactor(surveyCalculation.dogLeg(60.46,52.23,326.92,327.12)),96));
         System.out.println("********************Good Job***************Continue");
-        System.out.println("Total TVD is: "+surveyCalculation.total_TVD(95.7,3402.00));
+        System.out.println("Total TVD is: "+surveyCalculation.total_TVD(53.16,7592));
         System.out.println("********************Good Job***************Continue");
-        System.out.println("Total North/South is: "+surveyCalculation.total_northSouth(3.6285826461746704,6.25));
+        System.out.println("Total North/South is: "+surveyCalculation.total_northSouth(66.97,-352.71));
         System.out.println("********************Good Job***************Continue");
-        System.out.println("Total East/West is: "+surveyCalculation.total_eastWest(-15.37,-12.58));
+        System.out.println("Total East/West is: "+surveyCalculation.total_eastWest(-43.466,44.3));
         System.out.println("********************Good Job***************Continue");
-        System.out.println("Closure Distance is: "+surveyCalculation.closureDistance(9.87858264617467,-27.95));
+        System.out.println("Closure Distance is: "+surveyCalculation.closureDistance(-285.74,0.83));
         System.out.println("********************Good Job***************Continue");
-        System.out.println("Closure Angel is: "+surveyCalculation.closureAngle(9.88,-27.95));
+        System.out.println("Closure Angel is: "+surveyCalculation.closureAngle(-285.74,0.83));
         System.out.println("********************Good Job***************Continue");
-        System.out.println("Directional Difference DD is: "+surveyCalculation.directionalDifference(286,289.47));
+        System.out.println("Directional Difference DD is: "+surveyCalculation.directionalDifference(330,0.166));
         System.out.println("********************Good Job***************Continue");
-        System.out.println("Vertical Section is: "+surveyCalculation.verticalSection_VS(29.644,-3.47));
+        System.out.println("Vertical Section is: "+surveyCalculation.verticalSection_VS(285.74,-3.47));
         System.out.println("********************Good Job***************Continue");
-        System.out.println("Dog Leg Severity is: "+surveyCalculation.dogLegSeverity(2.792,97));
+        System.out.println("Dog Leg Severity is: "+surveyCalculation.dogLegSeverity(8.23,96));
+        System.out.println("**************************");
 
-         */ // first example
+        System.out.println(29.6448 * Math.cos(Math.toRadians(-3.47)));
+        System.out.println(285.74 * Math.cos(Math.toRadians(0.1664)));
+
+
+
+        // first example
+        /*
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("enter you current depth");
+        double md2 = scanner.nextDouble();
+        System.out.println("enter you previous depth");
+        double md1 = scanner.nextDouble();
+        System.out.println("enter current inc");
+        double inc2 =  scanner.nextDouble();
+        System.out.println("enter your previous inc");
+        double inc1 = scanner.nextDouble();
+        System.out.println("enter your current Azimuth");
+        double az2 = scanner.nextDouble();
+        System.out.println("enter your previous Azimuth");
+        double az1 = scanner.nextDouble();
+        System.out.println("enter your previous TDV");
+        double tvd1 = scanner.nextDouble();
+        System.out.println("enter previous north/south coordinates");
+        double northSouth = scanner.nextDouble();
+        System.out.println("enter previous east/west coordinates");
+        double eastWest = scanner.nextDouble();
+        System.out.println("enter your target azimuth");
+        double targetDirection = scanner.nextDouble();
+        System.out.println("Here are your surveys attributes");
+
+
+        SurveyCalculation calc = new SurveyCalculation();
+       double courseLength =  calc.courseLength(md2, md1);
+       double dogLeg =  calc.dogLeg(inc2,inc1,az2,az1);
+       double smoothFactor = calc.smoothFactor(dogLeg);
+       double deltaNS = calc.changeNorthSouth(inc1,inc2,az1,az2,smoothFactor,courseLength);
+       double deltaEW = calc.changeEastWest(inc1,inc2,az1,az2,smoothFactor,courseLength);
+       double deltaTVD = calc.changeInTVD(inc1,inc2,smoothFactor,courseLength);
+       double totalTVD = calc.total_TVD(deltaTVD,tvd1);
+       double totalNorthSouth = calc.total_northSouth(deltaNS,northSouth);
+       double totalEastWest = calc.total_eastWest(deltaEW,eastWest);
+       double closureDistance = calc.closureDistance(totalNorthSouth,totalEastWest);
+       double closureAngel = calc.closureAngle(totalNorthSouth,totalEastWest);
+       double dd = calc.directionalDifference(targetDirection,closureAngel);
+       double vs = calc.verticalSection_VS(closureDistance,dd);
+       double dls = calc.dogLegSeverity(dogLeg,courseLength);
+        DecimalFormat df = new DecimalFormat("#.##");
+
+        System.out.println("CL: "+courseLength+" Inc: " +inc2+" Az: "+az2+" TVD: "+df.format(totalTVD)+" VS: "+df.format(vs)
+                +" N/S: "+df.format(totalNorthSouth)
+                +" E/W: "+df.format(totalEastWest)+" DLS: "+df.format(dls)+" CD: "+df.format(closureDistance)+" CA: "+
+                df.format(closureAngel));
+
+         */
+
 
         /*
-        SurveyCalculation calc = new SurveyCalculation();
+       String str = "CL: "+courseLength+" Inc: " +inc2+" Az: "+az2+" TVD: "+totalTVD+" VS: "+vs+" N/S: "+totalNorthSouth
+               +" E/W: "+totalEastWest+" DLS: "+dls+" CD: "+closureDistance+" CA: "+closureAngel;
+        DecimalFormat df = new DecimalFormat("#.##");
+
+        df.format(totalTVD);
+        df.format(vs);
+        df.format(totalNorthSouth);
+        df.format(totalEastWest);
+        df.format(dls);
+        df.format(closureDistance);
+        df.format(closureAngel);
+
+         */
+
+
+
+
+
+        /*
         System.out.printf("course length is: " + calc.courseLength(3618, 3522));
         System.out.println();
         System.out.printf("dog leg is: " + calc.dogLeg(14, 10.75, 273, 282));

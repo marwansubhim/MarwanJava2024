@@ -7,6 +7,7 @@ import java.util.Map;
 public class Test2 {
 
     public static void main(String[] args) {
+
         Map<String, Integer> map = new HashMap<>();
         map.put("Marwan",38);
         map.put("Manara",25);

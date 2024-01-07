@@ -11,13 +11,14 @@ import java.util.function.Function;
 public class Main {
     public static void main(String[] args) {
 
-/*
+        /*
 int[] intArr = {1, 2, 3, 4, 5, 6};
 
         for (int j : intArr) {
             System.out.println(j);
         }
- */
+        */
+
         String name = "Marwan ";
 
         /*
@@ -192,9 +193,6 @@ int[] intArr = {1, 2, 3, 4, 5, 6};
         df.format(closureAngel);
 
          */
-
-
-
 
 
         /*

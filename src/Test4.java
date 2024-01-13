@@ -59,7 +59,7 @@ public class Test4 {
 
         DecimalFormat df = new DecimalFormat("#.##");
 
-        System.out.println("Depth    Inc    Az     TVD     Vsec    N/S    E/W     DLS   CD      CA");
+        System.out.println("Depth    Inc    Az      TVD      Vsec    N/S    E/W     DLS   CD      CA");
 
         System.out.println(
                currentDepth+"  "+inc2+"  "+az2+"  "+df.format(totalTVD)+"  "+df.format(verticalSection)

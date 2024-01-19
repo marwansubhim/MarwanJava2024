@@ -12,24 +12,20 @@ public class BucketSort {
     public static void main(String[] args) {
 
         System.out.println("Bism Allah Al Rahman Al Raheem");
-        Double[] array = {-2.5,0.42, 0.32, 0.33, 0.52, 0.37, 0.47, 0.51};
-
-        System.out.println("Original Array:");
-        printArray(array);
-
-        bucketSort(array);
-
-        System.out.println("\nSorted Array using Bucket Sort:");
-        printArray(array);
 
         System.out.println("****************************");
 
         Integer[] intArr = {9,2,3,5,8,4,25,-3,-12,0,5,4,-3};
 
-        printArray(intArr);
-
 
     }
+
+
+}
+
+
+
+ /*
 
 
     public static void bucketSort(Double[] array) {
@@ -74,4 +70,4 @@ public class BucketSort {
         System.out.println();
     }
 
-}
+     */

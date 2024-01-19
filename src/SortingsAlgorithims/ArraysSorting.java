@@ -47,7 +47,7 @@ public class ArraysSorting {
         return arr;
     }
 
-    public  int[] sortSelection(int[] arr) {
+    public  int[] selectionSort(int[] arr) {
         for (int currentPlace = 0; currentPlace < arr.length; currentPlace++) {
             int smallest = Integer.MAX_VALUE;
             int smallestAt = currentPlace + 1;
@@ -65,7 +65,7 @@ public class ArraysSorting {
         return arr;
     }
 
-    public  int[] sortInsertion (int[] arr){
+    public  int[] insertionSort (int[] arr){
 
         for(int i = 1; i < arr.length; i++) {
             int value = arr[i];
@@ -80,7 +80,7 @@ public class ArraysSorting {
         return arr;
     }
 
-    public  int[] sortCocktail(int[] arr){
+    public  int[] cocktailSort(int[] arr){
 
         boolean swapped;
         do {
@@ -111,7 +111,7 @@ public class ArraysSorting {
         return arr;
     }
 
-    public  int[] sortComb(int[] arr){
+    public  int[] combSort(int[] arr){
 
             int gap_length = arr.length;
             float shrinkFactor = 1.3f;
@@ -137,7 +137,7 @@ public class ArraysSorting {
         return arr;
     }
 
-    public  int[] sortCounting(int[] arr){
+    public  int[] countingSort(int[] arr){
         int min = arr[0];
         int max = arr[0];
         for (int each: arr){
@@ -160,7 +160,7 @@ public class ArraysSorting {
         return arr;
     }
 
-    public  int[] sortShell(int[] arr){
+    public  int[] shellSort(int[] arr){
 
         int increment = arr.length / 2;
         while (increment > 0) {
@@ -183,7 +183,7 @@ public class ArraysSorting {
         return arr;
     }
 
-    public  int[] sortBucket(int[] arr){
+    public  int[] bucketSort(int[] arr){
         int max_value = arr[0];
         for (int each :arr){
             if (each>max_value)max_value=each;
@@ -200,13 +200,13 @@ public class ArraysSorting {
         return sorted;
     }
 
-    public  double[] sortBubble(double[] arr) {
+    public static int[] bubbleSort(int[] arr) {
 
         for (int i = 0; i < arr.length; i++)
             for (int j = 0; j < arr.length - i - 1; j++)
                 if (arr[j] > arr[j + 1]) {
                     // swap temp and arr[i]
-                    double temp = arr[j];
+                    int temp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
                 }

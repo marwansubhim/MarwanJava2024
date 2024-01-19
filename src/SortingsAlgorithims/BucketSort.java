@@ -19,7 +19,7 @@ public class BucketSort {
         int[] intArr = {9,2,3,5,8,4,25,-3,-12,0,5,4,-3};
         ArraysSorting arraysSorting = new ArraysSorting();
 
-        System.out.println(Arrays.toString(arraysSorting.sortGnome(intArr)));
+        System.out.println("Gnome Sort: "+Arrays.toString(arraysSorting.sortGnome(intArr)));
 
 
     }

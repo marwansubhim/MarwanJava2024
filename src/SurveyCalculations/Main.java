@@ -38,7 +38,7 @@ int[] intArr = {1, 2, 3, 4, 5, 6};
          */
 
         /*
-        SurveyCalculation calculation = new SurveyCalculation();
+        SurveyCalculations.SurveyCalculation calculation = new SurveyCalculations.SurveyCalculation();
         System.out.println("delta MD is " + calculation.courseLength(3522, 3425));
         System.out.println("Dog leg is " + calculation.dogLeg(8, 10.75, 285, 282));
         System.out.println("******************************************");
@@ -156,7 +156,7 @@ int[] intArr = {1, 2, 3, 4, 5, 6};
         System.out.println("Here are your surveys attributes");
 
 
-        SurveyCalculation calc = new SurveyCalculation();
+        SurveyCalculations.SurveyCalculation calc = new SurveyCalculations.SurveyCalculation();
        double courseLength =  calc.courseLength(md2, md1);
        double dogLeg =  calc.dogLeg(inc2,inc1,az2,az1);
        double smoothFactor = calc.smoothFactor(dogLeg);

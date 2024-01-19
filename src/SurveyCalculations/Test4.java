@@ -1,3 +1,7 @@
+package SurveyCalculations;
+
+import SurveyCalculations.SurveyCalculation;
+
 import java.text.DecimalFormat;
 import java.util.Scanner;
 

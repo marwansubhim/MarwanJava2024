@@ -17,6 +17,9 @@ public class Test2 {
         map.put("Majd",6);
         System.out.println(map);
 
+
+
+
     }
 
 }

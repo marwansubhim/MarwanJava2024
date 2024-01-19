@@ -11,14 +11,11 @@ public class ArraysSorting {
 //        System.out.println(Arrays.toString(sortInsertion(arr)));
         //System.out.println(Arrays.toString(sortGnomeWhile(arr)));
 
-        System.out.println(Arrays.toString(sortCocktail(arr)));
-
-
     }
 
 
 
-    public static int[] sortGnome(int[] arr)  {
+    public  int[] sortGnome(int[] arr)  {
         int i = 1;
         int j = 2;
 
@@ -37,7 +34,7 @@ public class ArraysSorting {
         return arr;
     }
 
-    public static int[] sortBubble(int[] arr) {
+    public  int[] sortBubble(int[] arr) {
 
         for (int i = 0; i < arr.length; i++)
             for (int j = 0; j < arr.length - i - 1; j++)
@@ -50,7 +47,7 @@ public class ArraysSorting {
         return arr;
     }
 
-    public static int[] sortSelection(int[] arr) {
+    public  int[] sortSelection(int[] arr) {
         for (int currentPlace = 0; currentPlace < arr.length; currentPlace++) {
             int smallest = Integer.MAX_VALUE;
             int smallestAt = currentPlace + 1;
@@ -68,7 +65,7 @@ public class ArraysSorting {
         return arr;
     }
 
-    public static int[] sortInsertion (int[] arr){
+    public  int[] sortInsertion (int[] arr){
 
         for(int i = 1; i < arr.length; i++) {
             int value = arr[i];
@@ -83,7 +80,7 @@ public class ArraysSorting {
         return arr;
     }
 
-    public static int[] sortCocktail(int[] arr){
+    public  int[] sortCocktail(int[] arr){
 
         boolean swapped;
         do {
@@ -114,7 +111,7 @@ public class ArraysSorting {
         return arr;
     }
 
-    public static int[] sortComb(int[] arr){
+    public  int[] sortComb(int[] arr){
 
             int gap_length = arr.length;
             float shrinkFactor = 1.3f;
@@ -140,7 +137,7 @@ public class ArraysSorting {
         return arr;
     }
 
-    public static int[] sortCounting(int[] arr){
+    public  int[] sortCounting(int[] arr){
         int min = arr[0];
         int max = arr[0];
         for (int each: arr){
@@ -163,7 +160,7 @@ public class ArraysSorting {
         return arr;
     }
 
-    public static int[] sortShell(int[] arr){
+    public  int[] sortShell(int[] arr){
 
         int increment = arr.length / 2;
         while (increment > 0) {
@@ -186,7 +183,7 @@ public class ArraysSorting {
         return arr;
     }
 
-    public static int[] sortBucket(int[] arr){
+    public  int[] sortBucket(int[] arr){
         int max_value = arr[0];
         for (int each :arr){
             if (each>max_value)max_value=each;
@@ -203,7 +200,7 @@ public class ArraysSorting {
         return sorted;
     }
 
-    public static double[] sortBubble(double[] arr) {
+    public  double[] sortBubble(double[] arr) {
 
         for (int i = 0; i < arr.length; i++)
             for (int j = 0; j < arr.length - i - 1; j++)
@@ -216,7 +213,7 @@ public class ArraysSorting {
         return arr;
     }
 
-    public static int[] sortGnomeFor(int[] arr) {
+    public  int[] sortGnomeFor(int[] arr) {
         for (int i = 1, j = 2; i < arr.length; ) {
             if (arr[i - 1] <= arr[i]) {
                 i = j;

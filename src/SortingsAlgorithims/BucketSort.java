@@ -1,6 +1,7 @@
 package SortingsAlgorithims;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -15,7 +16,10 @@ public class BucketSort {
 
         System.out.println("****************************");
 
-        Integer[] intArr = {9,2,3,5,8,4,25,-3,-12,0,5,4,-3};
+        int[] intArr = {9,2,3,5,8,4,25,-3,-12,0,5,4,-3};
+        ArraysSorting arraysSorting = new ArraysSorting();
+
+        System.out.println(Arrays.toString(arraysSorting.sortGnome(intArr)));
 
 
     }

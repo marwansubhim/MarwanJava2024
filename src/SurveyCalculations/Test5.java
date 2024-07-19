@@ -11,8 +11,6 @@ public class Test5 {
 //        for (int i = 0; i<1000; i++){
 //            System.out.println("Hello Quincy");
 //        }
-
-
         System.out.println(Math.cos(Math.toRadians(60)));
 
     }

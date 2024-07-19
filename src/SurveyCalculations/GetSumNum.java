@@ -1,6 +1,7 @@
 package SurveyCalculations;
 
 import java.lang.reflect.Array;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -30,8 +31,10 @@ public class GetSumNum {
         System.out.println(convertDegreesToRadians(deg1));
          */
 
-        System.out.println(vincentyDistFrom(-49.5f, 69f, -53.1f, -36.5f));
-        System.out.println(haversineDistForm(-49.5f, 69f, -53.1f, -36.5f));
+        DecimalFormat d = new DecimalFormat("#.#####");
+
+        System.out.println(d.format(vincentyDistFrom(-49.5, 69, -53.1, -36.5)));
+        System.out.println(d.format(haversineDistForm(-49.5, 69, -53.1, -36.5)));
 
 
 
@@ -51,14 +54,14 @@ public class GetSumNum {
         return radiansList;
     }
 
-    public static float vincentyDistFrom(float lat1, float lng1, float lat2, float lng2) {
+    public static double vincentyDistFrom(double lat1, double lng1, double lat2, double lng2) {
 
         double dLat = Math.toRadians(lat2 - lat1);
         double dLng = Math.toRadians(lng2 - lng1);
         double a = Math.sin(dLat / 2) * Math.sin(dLat / 2) + Math.cos(Math.toRadians(lat1))
                 * Math.cos(Math.toRadians(lat2)) * Math.sin(dLng / 2) * Math.sin(dLng / 2);
         double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-        float dist = (float) (EARTH_RADIUS * c);
+        double dist = (double) (EARTH_RADIUS * c);
         return dist;
     }
 
